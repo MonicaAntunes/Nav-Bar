@@ -1,7 +1,7 @@
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu)
-    this.navList = document.querySelectorAll(navList)
+    this.navList = document.querySelector(navList)
     this.navLinks = document.querySelectorAll(navLinks)
     this.activeClass = 'active'
 
@@ -19,8 +19,8 @@ class MobileNavbar {
   }
 
   handleClick() {
-    this.navList.classList.toggle(this.activeClass)
-    this.mobileMenu.classList.toggle(this.activeClass)
+    this.navList.classList.toggle(`${this.activeClass}`)
+    this.mobileMenu.classList.toggle(`${this.activeClass}`)
     this.animateLinks()
   }
 
@@ -42,3 +42,4 @@ const mobileNavbar = new MobileNavbar(
   '.nav-list li'
 )
 mobileNavbar.init()
+5
